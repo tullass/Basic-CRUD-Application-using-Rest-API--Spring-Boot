@@ -1,0 +1,72 @@
+
+<head>
+<title>Banco Lista</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+
+<body>
+	<h2>Lista Banco</h2><br><br>
+	<form>
+	<div class="row"><div class="form-group col-md-4">
+	<label>Nome</label>
+	<input ng-model="search.nome" class="form-control">
+	</div>
+	<div class="form-group col-md-2">
+				<label>Semestre <select
+					ng-model="search.semestre.descricao" class="form-control">					
+					
+						<option ng-repeat="d in semestress" value="{{d.descricao}}">{{d.descricao}}</option>
+				</select></label>
+			</div>
+			
+			<div class="form-group col-md-2">
+				<label>Turma <select
+					ng-model="search.turma.descricao" class="form-control">
+						<option ng-repeat="d in turmas" value="{{d.descricao}}">{{d.descricao}}</option>
+				</select></label>
+			</div>	<div class="row">		
+			</div><div class="form-group col-md-1">
+		
+			<input type="button" ng-click="exportToPdf()" class="btn btn-danger"
+				value="PDF" /></div> <label><input type="button"
+				ng-click="limpar()" class="btn btn-success" value="Limpar Pesquisa" />
+			</label></div>
+
+		<br> <br>		<br> <br>
+		
+		<table  class="table table-hover">
+			<tr>
+				<th>Nome do aluno</th>
+				<th>Género</th>
+				<th>Turma</th>
+				<th>Classe</th>
+				<th>Sala</th>
+				<th>Semestre</th>				<th>Acções</th>
+				
+
+
+
+			</tr>
+			<tr data-ng-repeat="banco in alunos | filter:search:strict">
+				<td>{{banco.aluno.nome}}</td>
+				<td>{{banco.aluno.genero}}</td>
+
+				<td>{{banco.turma.descricao}}</td>
+				<td>{{banco.turma.nivel.descricao}}</td>
+				<td>{{banco.turma.sala}}</td>
+				<td>{{banco.semestre.descricao}}</td>
+
+
+
+				<td><a href="#/notas/{{banco.id}}"
+					class="btn btn-link btn-addon m-b-sm btn-rounded btn-sm">Alterar
+						Nota</a></td>
+
+
+			</tr>
+		</table>
+
+	</form>
+</body>
+
+

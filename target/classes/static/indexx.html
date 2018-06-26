@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html ng-app="bancoo">
+
+<head>
+<base href="/">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"  type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/modern.min.css">
+<link rel="stylesheet" type="text/css" href="css/fieldset.css">
+<link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+
+
+
+<title>SGE</title>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-route.min.js"></script>
+<script type="text/javascript" src="rotas.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+
+
+<script type="text/javascript" src="ctrl/bancoCtrl.js"></script>
+<script type="text/javascript" src="ctrl/classeCtrl.js"></script>
+<script type="text/javascript" src="ctrl/alunoCrtl.js"></script>
+<script type="text/javascript" src="ctrl/faturadatas.js"></script>
+
+
+
+<script type="text/javascript" src="ctrl/turmaCtrl.js"></script>
+<script type="text/javascript" src="service/turmaService.js"></script>
+<script type="text/javascript" src="service/alunoService.js"></script>
+
+
+
+<script type="text/javascript" src="ctrl/adiantado.js"></script>
+<script type="text/javascript" src="ctrl/adiantadoReport.js"></script>
+
+
+
+<script type="text/javascript" src="ctrl/tabelaCtrl.js"></script>
+<script type="text/javascript" src="ctrl/matriculaCrtl.js"></script>
+
+<script type="text/javascript" src="ctrl/notaCtrl.js"></script>
+<script type="text/javascript" src="ctrl/notaListaCtrl.js"></script>
+<script type="text/javascript" src="ctrl/faturaa3.js"></script>
+
+
+
+
+<script type="text/javascript" src="service/adiantadoService.js"></script>
+<script type="text/javascript" src="service/ClasseService.js"></script>
+
+
+<script type="text/javascript" src="service/bancoService.js"></script>
+<script type="text/javascript" src="service/tabelaService.js"></script>
+<script type="text/javascript" src="service/notasService.js"></script>
+<script type="text/javascript" src="service/notaListaService.js"></script>
+<script type="text/javascript" src="service/matriculaService.js"></script>
+<script type="text/javascript" src="amoments/moment.js"></script>
+
+
+
+
+
+
+
+
+</head>
+<a href="#/cad/aluno" class="btn btn-link">Aluno</a>
+<a href="#/cad/matricula" class="btn btn-link">Matricular</a>
+
+	<a href="pages/servico.html" class="btn btn-link">Servico</a>
+	<a href="#/fatura/data" class="btn btn-link">Datas</a>
+				<a href="pages/datasadiantadofatura.html" class="btn btn-link">Data Adiantado</a>
+		
+	
+	<a  href="/faturaa" class="btn btn-link">Fatura</a>
+	<a href="/adiantadoo" class="btn btn-link">Adiantamento</a>
+
+	<a href="/adiantadoReport" class="btn btn-link">Relatorios</a>
+	<a href="/bancoa" class="btn btn-danger">Bancos</a>
+	<a href="/cad/classe" class="btn btn-danger">Classes</a>
+	<a href="cad/turma" class="btn btn-link">Turmas</a>
+			<a href="/listaNota" class="btn btn-link">Aluno notas</a>
+	
+	
+
+<body class="container">
+		<ng-view></ng-view>
+	
+
+
+</body>
+
+</html>
